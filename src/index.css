@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -6,11 +6,11 @@
 
 body {
   margin: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(#29251c, #2c2306);
-  color: #d9e2f1;
+  background: linear-gradient(#c1e6ff, #ffffff);
+  color: #000000;
   min-height: 100vh;
 }
 
@@ -28,24 +28,24 @@ body {
 }
 
 #main-header #title img {
-  width: 4rem;
-  height: 4rem;
+  width: 2rem;
+  height: 2rem;
   object-fit: contain;
   border-radius: 50%;
   border: 2px solid #ffc404;
 }
 
 #main-header button {
-  font-size: 1.5rem;
-  font-family: 'Lato', sans-serif;
+  font-size: 0.85rem;
+  font-family: "Lato", sans-serif;
 }
 
 h1 {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1rem;
   margin: 0;
-  color: #ffc404;
+  color: #021e9b;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
@@ -57,12 +57,12 @@ h1 {
   margin: 2rem auto;
   padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
   gap: 1rem;
 }
 
 .meal-item {
-  background-color: #1d1a16;
+  background-color: #8b8b8b;
   border-radius: 1rem;
   overflow: hidden;
   text-align: center;
@@ -74,16 +74,17 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-size: 0.5rem;
 }
 
 .meal-item img {
   width: 100%;
-  height: 20rem;
+  height: 5rem;
   object-fit: cover;
 }
 
 .meal-item h3 {
-  font-size: 1.5rem;
+  font-size: 0.75rem;
   font-weight: bold;
   margin: 0.75rem 0;
 }
@@ -94,9 +95,9 @@ h1 {
 
 .meal-item-price {
   display: inline-block;
-  background-color: #312c1d;
+  background-color: #616161;
   color: #ffc404;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: bold;
   padding: 0.5rem 2rem;
   margin: 0;
@@ -166,7 +167,7 @@ h1 {
   border-radius: 50%;
   border: none;
   background-color: #312c1d;
-  color: #ffc404;
+  color: #f7e7b4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,7 +176,7 @@ h1 {
 .cart-item-actions button:hover,
 .cart-item-actions button:active {
   background-color: #1d1a16;
-  color: #ffab04;
+  color: #428eac;
 }
 
 .control {
@@ -207,8 +208,8 @@ h1 {
 .button {
   font: inherit;
   cursor: pointer;
-  background-color: #ffc404;
-  border: 1px solid #ffc404;
+  background-color: #fff0be;
+  border: 1px solid #fff0be;
   color: #1f1a09;
   padding: 0.5rem 1.5rem;
   border-radius: 4px;
@@ -216,9 +217,9 @@ h1 {
 
 .button:hover,
 .button:active {
-  background-color: #ffab04;
-  border-color: #ffab04;
-  color: #1f1a09;
+  background-color: #0365c0;
+  border-color: #0365c0;
+  color: #ffffff;
 }
 
 .text-button {
@@ -226,7 +227,7 @@ h1 {
   cursor: pointer;
   background-color: transparent;
   border: none;
-  color: #ffc404;
+  color: rgb(1, 71, 163);
 }
 
 .text-button:hover,
