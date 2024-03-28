@@ -1,21 +1,11 @@
-import Cart from './components/Cart.jsx';
-import Checkout from './components/Checkout.jsx';
-import Header from './components/Header.jsx';
-import Meals from './components/Meals.jsx';
-import { CartContextProvider } from './store/CartContext.jsx';
-import { UserProgressContextProvider } from './store/UserProgressContext.jsx';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 
-function App() {
-  return (
-    <UserProgressContextProvider>
-      <CartContextProvider>
-        <Header />
-        <Meals />
-        <Cart />
-        <Checkout />
-      </CartContextProvider>
-    </UserProgressContextProvider>
-  );
-}
+import App from './App.jsx'
+import './index.css'
 
-export default App;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
