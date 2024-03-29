@@ -1,7 +1,14 @@
+import { useContext } from "react";
+
 import logoImg from "../assets/logo.jpg";
 import Button from "./UI/Button";
+import UserProgressContext from "../store/UserProgressContext.jsx";
 
 export default function Header() {
+  const userProgressCtx = useContext(UserProgressContext);
+  function handleShowCart() {
+    userProgressCtx.showCart();
+  }
   return (
     <header id="main-header">
       <div id="title">
@@ -9,7 +16,9 @@ export default function Header() {
         <h1>ReacFood</h1>
       </div>
       <nav>
-        <Button textOnly>Cart (0)</Button>
+        <Button textOnly onClick={handleShowCart}>
+          Cart (0)
+        </Button>
       </nav>
     </header>
   );
