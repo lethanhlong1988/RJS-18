@@ -25,8 +25,8 @@ export default function Cart() {
             name={item.name}
             quantity={item.quantity}
             price={item.price}
-            onIncrease={() => console.log("increase")}
-            onDecrease={() => console.log("decrease")}
+            onIncrease={() => cartCtx.addItem(item)}
+            onDecrease={() => cartCtx.removeItem(item.id)}
           />
         ))}
       </ul>
