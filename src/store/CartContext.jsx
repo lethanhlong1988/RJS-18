@@ -14,23 +14,46 @@ function cartReducer(state, action) {
         (item) => item.id === action.item.id,
       );
       updatedItems = [...state.items];
-
+      /*
+       Trường hợp món được trọn có trong mảng dữ liệu rồi 
+      thì existingCartItemIndex sẽ trả ra một số > -1
+      */
       if (existingCartItemIndex > -1) {
         updatedItems[existingCartItemIndex] = {
           ...updatedItems[existingCartItemIndex],
           quantity: updatedItems[existingCartItemIndex].quantity + 1,
         };
       } else {
+        /*
+       Trường hợp món được trọn không có trong mảng dữ liệu rồi 
+      thì existingCartItemIndex sẽ trả ra một số = -1
+      */
         updatedItems.push({ ...action.item, quantity: 1 });
       }
+      console.log(updatedItems);
       break;
     case "REMOVE_ITEM":
       existingCartItemIndex = state.items.findIndex(
         (item) => item.id === action.id,
       );
-      updatedItems = state.items.filter(
-        (item, index) => index !== existingCartItemIndex,
-      );
+      updatedItems = [...state.items];
+      /*
+      Trường hợp món được chọn có số lượng > 1
+      */
+      if (updatedItems[existingCartItemIndex].quantity > 1) {
+        updatedItems[existingCartItemIndex] = {
+          ...updatedItems[existingCartItemIndex],
+          quantity: updatedItems[existingCartItemIndex].quantity - 1,
+        };
+      } else {
+        /*
+  Trường hợp món được chọn có số lượng = 1
+  */
+        updatedItems = state.items.filter(
+          (item, index) => index !== existingCartItemIndex,
+        );
+      }
+
       break;
 
     default:
