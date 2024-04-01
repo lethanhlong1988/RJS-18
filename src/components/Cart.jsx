@@ -8,8 +8,11 @@ import CartItem from "./CartItem";
 
 export default function Cart() {
   const cartCtx = useContext(CartContext);
-  console.log(cartCtx.items);
   const userProgressCtx = useContext(UserProgressContext);
+
+  const cartTotal = cartCtx.items.reduce((totalPrice, item) => {
+    return totalPrice + item.price.quantity * item.price, 0;
+  });
 
   function handleCloseCart() {
     userProgressCtx.hideCart();
